@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_medium"
+    android:layout_marginLeft="@dimen/margin_medium"
+    android:layout_marginRight="@dimen/margin_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_shops_img"
+            app:riv_corner_radius="12dp"
+            app:riv_border_width="1dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:src="@drawable/dummy_shop_image"
+            android:scaleType="centerCrop"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_shop_name_and_town"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_shops_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ERNEST JONES"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/primary_text"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_shops_town"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_shops_name"
+                android:text="London"
+                android:textSize="@dimen/text_regular"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
